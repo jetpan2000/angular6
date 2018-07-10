@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app: Angular 6';
+  isDisabled: boolean = false;
+  is_Disabled:boolean = false;
 }

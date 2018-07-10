@@ -3,29 +3,23 @@
     <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>            
     <table class="table">
       <thead>
-        <tr>
+          <tr><td [attr.colspan]="columnSpan">This used {{columnSpan}} interpolation</td></tr>
+          <tr><td attr.colspan="{{columnSpan}}">colspan:{{columnSpan}}2This used interpolation</td></tr>
+       
+          <tr>
           <th>Firstname</th>
           <th>Lastname</th>
           <th>Email</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{{firstName}}</td>
-          <td>{{lastName}}</td>
-          <td>{{email}}</td>
-        </tr>
-        <tr>
-          <td>Mary</td>
-          <td>Moe</td>
-          <td>mary@example.com</td>
-        </tr>
-        <tr>
-          <td>July</td>
-          <td>Dooley</td>
-          <td>july@example.com</td>
-        </tr>
+        <tr *ngFor="let employee of employees" >
+          <td>{{employee.firstName}}</td>
+          <td>{{employee.lastName}}</td>
+          <td>{{employee.email}}</td>
+        </tr>       
       </tbody>
     </table>
+    <button (click)='getEmployees()'>Get employees</button>
   </div>
   
