@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeTitlePipe } from './employee/employeeTitle.pipe';
+
 @NgModule({
   declarations: [
-    AppComponent, EmployeeComponent
+    AppComponent, EmployeeComponent,EmployeeTitlePipe
   ],
   imports: [
     BrowserModule
