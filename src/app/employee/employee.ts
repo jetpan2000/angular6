@@ -7,7 +7,7 @@ export interface IEmployee{
     salary: number;
     gendar: string;
     department?: string;
-    calculateMonthlySalary(salary:number):number;
+   // calculateMonthlySalary(salary:number):number;
 }
 
 export class Employee implements IEmployee {
@@ -18,4 +18,6 @@ export class Employee implements IEmployee {
     calculateMonthlySalary(salary: number):number{
         return salary/12;
     }
+
+    userText: string="from parent component";
 }

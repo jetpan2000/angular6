@@ -5,6 +5,10 @@
     <input type="radio" name="gender" (click)='getEmployeesByGender("all")' value="all"> All <br>
     <input type="radio" name="gender" (click)='getEmployeesByGender("female")' value="female"> Female<br>
     <input type="radio" name="gender" (click)='getEmployeesByGender("male")' value="male"> Male</div>
+    
+ <home [simpleInput]=userText> </home>
+    
+    <div> input something will pass to home component:<input type="text" [(ngModel)]='userText' /> </div>
     <table class="table table-borderd"  style="border: 1px solid black: #ddd !important;">
       <thead>
           <tr><td [attr.colspan]="columnSpan">This used {{columnSpan}} interpolation</td></tr>
