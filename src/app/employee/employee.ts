@@ -19,5 +19,5 @@ export class Employee implements IEmployee {
         return salary/12;
     }
 
-    userText: string="from parent component";
+    userText: string="from parent";
 }

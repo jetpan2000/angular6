@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output,  } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +9,18 @@ export class AppComponent {
   title = 'app: Angular 6';
   isDisabled: boolean = false;
   is_Disabled:boolean = false;
+
+  myCount: number= 111;  /// parent variable
+
+  countChange(event){
+    this.myCount = event;
+  }
+
+  increment() {
+    this.myCount++;
+  }
+
+  decrement() {
+    this.myCount--;
+  }
 }

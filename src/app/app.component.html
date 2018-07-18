@@ -7,7 +7,13 @@
 <a routerLink="home">HOme</a>
 <a routerLink="employee">Employees</a>
 <a routerLink="notfound">NOt found</a>
- 
+
+change myCount in app compoent , will affect sub component 
+parent myCount is:
+<span style="cursor:pointer" (click)='decrement()'>--</span>    {{myCount}}
+<span  style="cursor:pointer"  (click)='increment()'>++</span>
+
+Here is home component: <home [count]="myCount" (changeHappened)="countChange($event)"></home>
 
   <employee-list></employee-list>
 <button [disabled]="isDisabled">Click me</button>
