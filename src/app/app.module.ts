@@ -7,6 +7,7 @@ import { EmployeeTitlePipe } from './employee/employeeTitle.pipe';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import {RouterModule, Routes } from '@angular/router';
+import {MyDirectives} from './directives/highlight-me';
 
 /*
 const appRoutes :Routes = [
@@ -18,7 +19,7 @@ const appRoutes :Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent
+    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent, MyDirectives
   ],
   imports: [
     BrowserModule , FormsModule      //,RouterModule.forRoot(appRoutes,{ useHash:true})
