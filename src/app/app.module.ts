@@ -51,6 +51,10 @@ const appRoutes :Routes = [
         path:'thirdpage',
         component:ThirdPageComponent
       },
+      {
+        path:'**',
+        component:NotfoundComponent
+      },
     ])//,RouterModule.forRoot(appRoutes,{ useHash:true})
   ],
   providers: [],
