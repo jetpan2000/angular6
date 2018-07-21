@@ -15,6 +15,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
+import {RouterModule} from '@angular/router';
 
 //import {MyDirectives} from './directives/highlight-me';
 
@@ -32,7 +33,25 @@ const appRoutes :Routes = [
   ],
   imports: [
     BrowserModule , FormsModule, BrowserAnimationsModule  ,MatButtonModule, MatCheckboxModule ,MatDatepickerModule,MatNativeDateModule,
-    MatSelectModule ,MatMenuModule ,MatCardModule, MatTableModule, MatRadioModule, MatSlideToggleModule//,RouterModule.forRoot(appRoutes,{ useHash:true})
+    MatSelectModule ,MatMenuModule ,MatCardModule, MatTableModule, MatRadioModule, MatSlideToggleModule,
+    RouterModule.forRoot([
+      {
+        path:'', 
+        component:HomeComponent
+      },
+      {
+        path:'firstpage',
+        component:FirstPageComponent
+      },
+      {
+        path:'secondpage',
+        component:SecondPageComponent
+      },
+      {
+        path:'thirdpage',
+        component:ThirdPageComponent
+      },
+    ])//,RouterModule.forRoot(appRoutes,{ useHash:true})
   ],
   providers: [],
   bootstrap: [AppComponent]
