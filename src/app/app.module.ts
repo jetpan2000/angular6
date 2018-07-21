@@ -7,7 +7,7 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeTitlePipe } from './employee/employeeTitle.pipe';
 import { HomeComponent } from './home/home.component';
 import { NotfoundComponent } from './notfound/notfound.component';
-import {MatButtonModule, MatCheckboxModule, MatNativeDateModule, MatSelectModule} from '@angular/material';
+import {MatButtonModule, MatCheckboxModule, MatNativeDateModule, MatSelectModule, MatMenuModule,MatCardModule, MatTableModule} from '@angular/material';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MaterialModule } from './material.module';
 import {MatDatepickerModule} from '@angular/material/datepicker';
@@ -28,7 +28,7 @@ const appRoutes :Routes = [
   ],
   imports: [
     BrowserModule , FormsModule, BrowserAnimationsModule  ,MatButtonModule, MatCheckboxModule ,MatDatepickerModule,MatNativeDateModule,
-    MatSelectModule  //,RouterModule.forRoot(appRoutes,{ useHash:true})
+    MatSelectModule ,MatMenuModule ,MatCardModule, MatTableModule//,RouterModule.forRoot(appRoutes,{ useHash:true})
   ],
   providers: [],
   bootstrap: [AppComponent]
