@@ -16,6 +16,7 @@ import { FirstPageComponent } from './first-page/first-page.component';
 import { SecondPageComponent } from './second-page/second-page.component';
 import { ThirdPageComponent } from './third-page/third-page.component';
 import {RouterModule} from '@angular/router';
+import { PagedetailsComponent } from './pagedetails/pagedetails.component';
 
 //import {MyDirectives} from './directives/highlight-me';
 
@@ -29,7 +30,7 @@ const appRoutes :Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent, FirstPageComponent, SecondPageComponent, ThirdPageComponent
+    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent, FirstPageComponent, SecondPageComponent, ThirdPageComponent, PagedetailsComponent
   ],
   imports: [
     BrowserModule , FormsModule, BrowserAnimationsModule  ,MatButtonModule, MatCheckboxModule ,MatDatepickerModule,MatNativeDateModule,
@@ -50,6 +51,10 @@ const appRoutes :Routes = [
       {
         path:'thirdpage',
         component:ThirdPageComponent
+      },
+      {
+        path:'pagedetails/:pageid',
+        component:PagedetailsComponent
       },
       {
         path:'**',

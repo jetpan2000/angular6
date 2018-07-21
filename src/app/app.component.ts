@@ -21,6 +21,8 @@ export class AppComponent {
 
   myCount: number= 111;  /// parent variable
 
+   pageid: number = 123;
+
   countChange(event){
     this.myCount = event;
   }
