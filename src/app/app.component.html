@@ -14,6 +14,8 @@
 <a routerLink="thirdpage">Third Page</a><br/>
 <a routerLink="pagedetails/{{pageid}}">Page Details</a>  <input type=text [(ngModel)]='pageid' />   {{pageid}} <br/>   
 
+[ngModel]: from model to control: <input type=text [ngModel]='pageid' />
+Model change: <input type=text (ngModelChange)='pageid=$event' />
 <router-outlet></router-outlet>
 
  
