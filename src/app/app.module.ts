@@ -12,6 +12,9 @@ import {MatButtonModule, MatCheckboxModule, MatNativeDateModule, MatSelectModule
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import { MaterialModule } from './material.module';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import { FirstPageComponent } from './first-page/first-page.component';
+import { SecondPageComponent } from './second-page/second-page.component';
+import { ThirdPageComponent } from './third-page/third-page.component';
 
 //import {MyDirectives} from './directives/highlight-me';
 
@@ -25,7 +28,7 @@ const appRoutes :Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent
+    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent, FirstPageComponent, SecondPageComponent, ThirdPageComponent
   ],
   imports: [
     BrowserModule , FormsModule, BrowserAnimationsModule  ,MatButtonModule, MatCheckboxModule ,MatDatepickerModule,MatNativeDateModule,
