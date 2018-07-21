@@ -8,6 +8,33 @@
 <a routerLink="employee">Employees</a>
 <a routerLink="notfound">NOt found</a>
 
+here I will add Material components:<br/>
+-------------------------
+<div>
+   
+  <mat-checkbox class="example-margin" [(ngModel)]="checked">Checked</mat-checkbox>
+
+    <span>Yay, Material in Angular 2!</span>
+      
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    
+      <mat-form-field>
+        <mat-select placeholder="Favorite food">
+          <mat-option *ngFor="let food of foods" [value]="food.value">
+            {{food.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      
+  
+  
+</div>
+
+------------------------
+
+
 change myCount in app compoent , will affect sub component 
 parent myCount is:
 <span style="cursor:pointer" (click)='decrement()'>--</span>    {{myCount}}
