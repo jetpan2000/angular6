@@ -1,5 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {IEmployee} from './employee';
+import {CustomerService} from '../customer.service';
+
 @Component({
     selector: 'employee-list',
     templateUrl: './employee.component.html',
@@ -11,14 +13,23 @@ import {IEmployee} from './employee';
     email :string= 'test@test.com';
     columnSpan: number = 3;
 
-
+    customers: any[];
     employees:IEmployee[];
 
-    constructor() {
+    constructor(private customerService: CustomerService) {
       this.employees = [{code:"101",firstName:'firstName1', lastName:'lastname1',gendar:'male', email:'test1@test.com', birthday:'2000-1-1', salary: 40000},
       {code:"102",firstName:'firstName2', lastName:'lastname2', gendar:'male',email:'test2@test.com',birthday:'2000-1-2', salary: 40010},
       {code:"103",firstName:'firstName3', lastName:'lastname3',gendar:'female', email:'test3@test.com',birthday:'2000-1-3', salary: 40200.32},
     ];   
+    }
+
+    ngOnInit() {
+      this
+        .customerService
+        .getCustomers()
+        .subscribe((data: any[]) => {
+          this.customers = data;
+      });
     }
 
     getEmployees():void {
@@ -33,6 +44,9 @@ import {IEmployee} from './employee';
 
     getEmployeesByGender(gender: string){
       if (gender == 'all'){
+
+
+
         this.employees = [{code:"101", firstName:'firstName1', lastName:'lastname1',gendar:'male', email:'test1@test.com',birthday:'2000-1-4', salary: 40004},
         {code:"102",firstName:'firstName2', lastName:'lastname2', email:'test2@test.com',gendar:'female',birthday:'2000-1-5', salary: 40005.4567},
         {code:"103",firstName:'firstName3', lastName:'lastname3', email:'test3@test.com',gendar:'female',birthday:'2000-1-6', salary: 50000},

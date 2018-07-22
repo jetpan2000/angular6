@@ -18,6 +18,10 @@ import { ThirdPageComponent } from './third-page/third-page.component';
 import {RouterModule} from '@angular/router';
 import { PagedetailsComponent } from './pagedetails/pagedetails.component';
 
+import {CustomerService} from './customer.service';
+
+import {HttpClientModule} from '@angular/common/http';
+
 //import {MyDirectives} from './directives/highlight-me';
 
 /*
@@ -35,6 +39,7 @@ const appRoutes :Routes = [
   imports: [
     BrowserModule , FormsModule, BrowserAnimationsModule  ,MatButtonModule, MatCheckboxModule ,MatDatepickerModule,MatNativeDateModule,
     MatSelectModule ,MatMenuModule ,MatCardModule, MatTableModule, MatRadioModule, MatSlideToggleModule,
+    HttpClientModule,CustomerService,
     RouterModule.forRoot([
       {
         path:'', 

@@ -8,7 +8,7 @@
     
  
     
-    <div> input something will pass to home component:<input type="text" [(ngModel)]='userText' /> </div>
+    <div> customers: {{ customers | json }}   input something will pass to home component:<input type="text" [(ngModel)]='userText' /> </div>
     <table class="table table-borderd"  style="border: 1px solid black: #ddd !important;">
       <thead>
           <tr><td [attr.colspan]="columnSpan">This used {{columnSpan}} interpolation</td></tr>
