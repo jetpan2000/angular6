@@ -1,15 +1,36 @@
+const path = require('path');
 var webpack = require('webpack');
+
 module.exports = {
-context: __dirname + '/app',
-entry: {
-app: './src/main.ts',
-vendor: ['angular']
+  entry: {
+      main: './src/main.ts',      
+        },
+  devtool: 'inline-source-map',
+  module: {
+    rules: [
+      {
+        test: /\.tsx?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      }
+    ]
+  },
+  optimization: {
+    splitChunks: {
+        cacheGroups: {
+            commons: {
+                test: /[\\/]node_modules[\\/]/,
+                name: 'vendor',
+                chunks: 'all'
+            }
+        }
+    }
 },
-output: {
-path: __dirname + '/js',
-filename: 'app.bundle.js'
-},
-plugins: [
-new webpack.optimize.CommonsChunkPlugin(/* chunkName= */"vendor", /* filename= */"vendor.bundle.js")
-]
-}; 
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ]
+  },
+  output: {
+    filename: '[name].bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  }
+};

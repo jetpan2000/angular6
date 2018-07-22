@@ -23,7 +23,7 @@ export class AppComponent {
 
    pageid: number = 123;
 
-  countChange(event){
+  countChange(event:any){
     this.myCount = event;
   }
 
