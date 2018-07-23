@@ -34,12 +34,13 @@ const appRoutes :Routes = [
 
 @NgModule({
   declarations: [
-    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent, FirstPageComponent, SecondPageComponent, ThirdPageComponent, PagedetailsComponent
+    AppComponent, EmployeeComponent,EmployeeTitlePipe, HomeComponent, NotfoundComponent, FirstPageComponent, SecondPageComponent, 
+    ThirdPageComponent, PagedetailsComponent
   ],
   imports: [
     BrowserModule , FormsModule, BrowserAnimationsModule  ,MatButtonModule, MatCheckboxModule ,MatDatepickerModule,MatNativeDateModule,
     MatSelectModule ,MatMenuModule ,MatCardModule, MatTableModule, MatRadioModule, MatSlideToggleModule,
-    HttpClientModule,CustomerService,
+    HttpClientModule,
     RouterModule.forRoot([
       {
         path:'', 
@@ -67,7 +68,7 @@ const appRoutes :Routes = [
       },
     ])//,RouterModule.forRoot(appRoutes,{ useHash:true})
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

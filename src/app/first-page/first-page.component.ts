@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {CustomerService} from '../customer.service';
+
 
 @Component({
   selector: 'app-first-page',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FirstPageComponent implements OnInit {
 
-  constructor() { }
+  customers: any[];
+  constructor(private customerService: CustomerService) { }
 
   ngOnInit() {
+    this
+        .customerService
+        .getCustomers()
+        .subscribe((data: any[]) => {
+          this.customers = data;
+          console.log(data);
+      });
   }
 
 }
